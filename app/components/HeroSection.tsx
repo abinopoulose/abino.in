@@ -2,6 +2,12 @@
 
 import { motion } from 'framer-motion';
 
+const SKILLS = [
+	'JavaScript', 'React', 'Spring Boot', 'Java', 'Node.js', 
+	'Docker', 'AWS EC2', 'Nginx', 'Express.js', 'PostgreSQL', 
+	'MySQL', 'GitLab CI/CD'
+];
+
 export default function HeroSection() {
 	return (
 		<section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -28,18 +34,11 @@ export default function HeroSection() {
 						<p className="text-gray-400 mb-2">Full Stack Developer</p>
 						<p className="text-green-500">$ skills</p>
 						<div className="flex flex-wrap gap-2 mt-2">
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">JavaScript</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">React</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Spring Boot</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Java</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Node.js</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Docker</span>
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">AWS EC2</span> 
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Nginx</span> 
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">Express.js</span> 
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">PostgreSQL</span> 
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">MySQL</span> 
-							<span className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">GitLab CI/CD</span>
+							{SKILLS.map((skill) => (
+								<span key={skill} className="px-3 py-1 bg-green-500/10 rounded-md border border-green-500/20">
+									{skill}
+								</span>
+							))}
 						</div>
 					</div>
 				</motion.div>

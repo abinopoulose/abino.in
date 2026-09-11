@@ -31,5 +31,3 @@ jobs:
           publish_dir: ./out
           publish_branch: release
           force_orphan: false
-
-
